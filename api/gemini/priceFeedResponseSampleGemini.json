@@ -1,0 +1,532 @@
+[
+    {
+        "pair": "BTCDAI",
+        "price": "42193.56",
+        "percentChange24h": "0.0061"
+    },
+    {
+        "pair": "BTCGBP",
+        "price": "31182.24",
+        "percentChange24h": "0.0003"
+    },
+    {
+        "pair": "CRVUSD",
+        "price": "2.7847",
+        "percentChange24h": "0.0032"
+    },
+    {
+        "pair": "BTCUSD",
+        "price": "42106.66",
+        "percentChange24h": "-0.0034"
+    },
+    {
+        "pair": "USDCUSD",
+        "price": "1.0002",
+        "percentChange24h": "0.0004"
+    },
+    {
+        "pair": "BTCGUSD",
+        "price": "42076.65",
+        "percentChange24h": "-0.0023"
+    },
+    {
+        "pair": "YFIUSD",
+        "price": "22590.44",
+        "percentChange24h": "-0.0262"
+    },
+    {
+        "pair": "USTUSD",
+        "price": "1.002",
+        "percentChange24h": "0.0010"
+    },
+    {
+        "pair": "FILUSD",
+        "price": "20.424",
+        "percentChange24h": "-0.0103"
+    },
+    {
+        "pair": "SANDUSD",
+        "price": "3.90591",
+        "percentChange24h": "-0.0353"
+    },
+    {
+        "pair": "OXTETH",
+        "price": "0.0000911",
+        "percentChange24h": "-0.0899"
+    },
+    {
+        "pair": "DOGEBTC",
+        "price": "0.00000342",
+        "percentChange24h": "-0.0630"
+    },
+    {
+        "pair": "ETHUSD",
+        "price": "2874.23",
+        "percentChange24h": "-0.0047"
+    },
+    {
+        "pair": "OXTBTC",
+        "price": "0.00000623",
+        "percentChange24h": "-0.0984"
+    },
+    {
+        "pair": "LTCETH",
+        "price": "0.0425",
+        "percentChange24h": "-0.0207"
+    },
+    {
+        "pair": "COMPUSD",
+        "price": "122.39",
+        "percentChange24h": "-0.0084"
+    },
+    {
+        "pair": "KP3RUSD",
+        "price": "745.46",
+        "percentChange24h": "-0.0227"
+    },
+    {
+        "pair": "WCFGUSD",
+        "price": "0.501",
+        "percentChange24h": "-0.0583"
+    },
+    {
+        "pair": "ANKRUSD",
+        "price": "0.07301",
+        "percentChange24h": "-0.0357"
+    },
+    {
+        "pair": "MKRUSD",
+        "price": "1893.76",
+        "percentChange24h": "-0.0427"
+    },
+    {
+        "pair": "UNIUSD",
+        "price": "10.271",
+        "percentChange24h": "-0.0149"
+    },
+    {
+        "pair": "BATUSD",
+        "price": "0.78191",
+        "percentChange24h": "-0.0175"
+    },
+    {
+        "pair": "ETHEUR",
+        "price": "2546.63",
+        "percentChange24h": "0.0106"
+    },
+    {
+        "pair": "CUBEUSD",
+        "price": "6.0376",
+        "percentChange24h": "-0.0258"
+    },
+    {
+        "pair": "ELONUSD",
+        "price": "0.000000919",
+        "percentChange24h": "-0.0417"
+    },
+    {
+        "pair": "ZECETH",
+        "price": "0",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "CTXUSD",
+        "price": "8.2499",
+        "percentChange24h": "0.1900"
+    },
+    {
+        "pair": "BATBTC",
+        "price": "0.00001844",
+        "percentChange24h": "-0.0097"
+    },
+    {
+        "pair": "GRTUSD",
+        "price": "0.393",
+        "percentChange24h": "-0.0287"
+    },
+    {
+        "pair": "QNTUSD",
+        "price": "118.94",
+        "percentChange24h": "-0.0357"
+    },
+    {
+        "pair": "ETHDAI",
+        "price": "2872.05",
+        "percentChange24h": "-0.0260"
+    },
+    {
+        "pair": "AMPUSD",
+        "price": "0.02899",
+        "percentChange24h": "-0.0464"
+    },
+    {
+        "pair": "PAXGUSD",
+        "price": "1877.49",
+        "percentChange24h": "0.0038"
+    },
+    {
+        "pair": "EFILUSD",
+        "price": "20.424",
+        "percentChange24h": "-0.0103"
+    },
+    {
+        "pair": "ETHGUSD",
+        "price": "2873.55",
+        "percentChange24h": "0.0020"
+    },
+    {
+        "pair": "OXTUSD",
+        "price": "0.26336",
+        "percentChange24h": "-0.0941"
+    },
+    {
+        "pair": "LINKUSD",
+        "price": "15.2998",
+        "percentChange24h": "-0.0307"
+    },
+    {
+        "pair": "ETHGBP",
+        "price": "2125.23",
+        "percentChange24h": "0.0032"
+    },
+    {
+        "pair": "AAVEUSD",
+        "price": "153.2122",
+        "percentChange24h": "-0.0401"
+    },
+    {
+        "pair": "RNDRUSD",
+        "price": "2.738",
+        "percentChange24h": "0.0486"
+    },
+    {
+        "pair": "BCHUSD",
+        "price": "327.84",
+        "percentChange24h": "-0.0123"
+    },
+    {
+        "pair": "SNXUSD",
+        "price": "4.3836",
+        "percentChange24h": "-0.0360"
+    },
+    {
+        "pair": "STORJUSD",
+        "price": "1.09961",
+        "percentChange24h": "-0.0284"
+    },
+    {
+        "pair": "EFILFIL",
+        "price": "1",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "LINKETH",
+        "price": "0.0053165",
+        "percentChange24h": "-0.0267"
+    },
+    {
+        "pair": "INJUSD",
+        "price": "5.9629",
+        "percentChange24h": "-0.0419"
+    },
+    {
+        "pair": "MCUSD",
+        "price": "2.641",
+        "percentChange24h": "-0.0658"
+    },
+    {
+        "pair": "ZRXUSD",
+        "price": "0.57771",
+        "percentChange24h": "-0.0391"
+    },
+    {
+        "pair": "MIMUSD",
+        "price": "1.0023",
+        "percentChange24h": "-0.0036"
+    },
+    {
+        "pair": "LTCBTC",
+        "price": "0.00289",
+        "percentChange24h": "-0.0236"
+    },
+    {
+        "pair": "SKLUSD",
+        "price": "0.15214",
+        "percentChange24h": "0.0315"
+    },
+    {
+        "pair": "BCHETH",
+        "price": "0.1107",
+        "percentChange24h": "-0.0323"
+    },
+    {
+        "pair": "TOKEUSD",
+        "price": "38.75",
+        "percentChange24h": "0.0355"
+    },
+    {
+        "pair": "API3USD",
+        "price": "4.312",
+        "percentChange24h": "-0.0595"
+    },
+    {
+        "pair": "FTMUSD",
+        "price": "1.8588",
+        "percentChange24h": "-0.0310"
+    },
+    {
+        "pair": "LDOUSD",
+        "price": "1.532",
+        "percentChange24h": "0.0193"
+    },
+    {
+        "pair": "ZECUSD",
+        "price": "117.69",
+        "percentChange24h": "0.0111"
+    },
+    {
+        "pair": "ENSUSD",
+        "price": "16.545",
+        "percentChange24h": "-0.0171"
+    },
+    {
+        "pair": "BTCSGD",
+        "price": "57113.71",
+        "percentChange24h": "-0.0017"
+    },
+    {
+        "pair": "RENUSD",
+        "price": "0.34228",
+        "percentChange24h": "-0.0176"
+    },
+    {
+        "pair": "DAIUSD",
+        "price": "0.99979",
+        "percentChange24h": "-0.0005"
+    },
+    {
+        "pair": "SPELLUSD",
+        "price": "0.00554",
+        "percentChange24h": "-0.0382"
+    },
+    {
+        "pair": "LTCUSD",
+        "price": "122.1",
+        "percentChange24h": "-0.0256"
+    },
+    {
+        "pair": "CVCUSD",
+        "price": "0.28029",
+        "percentChange24h": "0.0047"
+    },
+    {
+        "pair": "LRCUSD",
+        "price": "0.88175",
+        "percentChange24h": "-0.0348"
+    },
+    {
+        "pair": "XTZUSD",
+        "price": "3.8832",
+        "percentChange24h": "-0.0006"
+    },
+    {
+        "pair": "LINKBTC",
+        "price": "0.00036377",
+        "percentChange24h": "-0.0266"
+    },
+    {
+        "pair": "ZECLTC",
+        "price": "0",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "DOGEUSD",
+        "price": "0.1441",
+        "percentChange24h": "-0.0650"
+    },
+    {
+        "pair": "KNCUSD",
+        "price": "1.81388",
+        "percentChange24h": "-0.0004"
+    },
+    {
+        "pair": "GALAUSD",
+        "price": "0.28705",
+        "percentChange24h": "0.0102"
+    },
+    {
+        "pair": "MANAUSD",
+        "price": "2.78721",
+        "percentChange24h": "-0.0204"
+    },
+    {
+        "pair": "UMAUSD",
+        "price": "5.9358",
+        "percentChange24h": "-0.0183"
+    },
+    {
+        "pair": "MASKUSD",
+        "price": "5.498",
+        "percentChange24h": "-0.0635"
+    },
+    {
+        "pair": "AXSUSD",
+        "price": "55.27",
+        "percentChange24h": "-0.0462"
+    },
+    {
+        "pair": "RLYUSD",
+        "price": "0.22988",
+        "percentChange24h": "0.0200"
+    },
+    {
+        "pair": "MIRUSD",
+        "price": "1.165",
+        "percentChange24h": "0.0050"
+    },
+    {
+        "pair": "ENJUSD",
+        "price": "1.7012",
+        "percentChange24h": "-0.0271"
+    },
+    {
+        "pair": "AUDIOUSD",
+        "price": "0.973",
+        "percentChange24h": "-0.0653"
+    },
+    {
+        "pair": "BTCEUR",
+        "price": "37290.79",
+        "percentChange24h": "-0.0001"
+    },
+    {
+        "pair": "SLPUSD",
+        "price": "0.02752",
+        "percentChange24h": "-0.0740"
+    },
+    {
+        "pair": "BONDUSD",
+        "price": "10.0016",
+        "percentChange24h": "0.0099"
+    },
+    {
+        "pair": "GUSDUSD",
+        "price": "1",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "LTCBCH",
+        "price": "0",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "MCO2USD",
+        "price": "11.51",
+        "percentChange24h": "-0.1078"
+    },
+    {
+        "pair": "RAREUSD",
+        "price": "0.652",
+        "percentChange24h": "0.1748"
+    },
+    {
+        "pair": "MATICUSD",
+        "price": "1.61268",
+        "percentChange24h": "-0.0362"
+    },
+    {
+        "pair": "ZECBTC",
+        "price": "0.00277",
+        "percentChange24h": "0.0073"
+    },
+    {
+        "pair": "NMRUSD",
+        "price": "28.096",
+        "percentChange24h": "-0.0148"
+    },
+    {
+        "pair": "FETUSD",
+        "price": "0.33298",
+        "percentChange24h": "-0.0231"
+    },
+    {
+        "pair": "BATETH",
+        "price": "0.0002724",
+        "percentChange24h": "-0.0084"
+    },
+    {
+        "pair": "ETHSGD",
+        "price": "3901.61",
+        "percentChange24h": "-0.0019"
+    },
+    {
+        "pair": "1INCHUSD",
+        "price": "1.6555",
+        "percentChange24h": "0.0048"
+    },
+    {
+        "pair": "ASHUSD",
+        "price": "20",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "BNTUSD",
+        "price": "2.4884",
+        "percentChange24h": "-0.0075"
+    },
+    {
+        "pair": "LPTUSD",
+        "price": "25.3026",
+        "percentChange24h": "-0.0225"
+    },
+    {
+        "pair": "SUSHIUSD",
+        "price": "3.9534",
+        "percentChange24h": "-0.0260"
+    },
+    {
+        "pair": "ALCXUSD",
+        "price": "154.11",
+        "percentChange24h": "-0.0016"
+    },
+    {
+        "pair": "ETHBTC",
+        "price": "0.06823",
+        "percentChange24h": "-0.0020"
+    },
+    {
+        "pair": "ZECBCH",
+        "price": "0",
+        "percentChange24h": "0.0000"
+    },
+    {
+        "pair": "LUNAUSD",
+        "price": "52.39",
+        "percentChange24h": "0.0073"
+    },
+    {
+        "pair": "RADUSD",
+        "price": "5.352",
+        "percentChange24h": "-0.0798"
+    },
+    {
+        "pair": "SHIBUSD",
+        "price": "0.000029189",
+        "percentChange24h": "-0.0455"
+    },
+    {
+        "pair": "DOGEETH",
+        "price": "0.00005",
+        "percentChange24h": "-0.0621"
+    },
+    {
+        "pair": "BCHBTC",
+        "price": "0.00777",
+        "percentChange24h": "-0.0115"
+    },
+    {
+        "pair": "BALUSD",
+        "price": "13.679",
+        "percentChange24h": "0.0145"
+    }
+]
