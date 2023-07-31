@@ -32,7 +32,6 @@ Run all tests in currenct directory and all sub directories:
 
 
 
-
 ### Resources
 * [Coinbase Pro API Docs](https://docs.cloud.coinbase.com/exchange/reference/exchangerestapi_getaccounts)
 * [Kraken API Docs](https://docs.kraken.com/rest/)
