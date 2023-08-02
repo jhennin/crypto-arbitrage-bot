@@ -1,0 +1,55 @@
+version: "3.9"
+services:
+  mysql:
+    image: mysql:latest
+    env_file:
+      - config-DOCKER.env
+    environment:
+      MYSQL_DATABASE: crypto_arbitrage_bot
+      MYSQL_USER: grafana
+    volumes:
+      - ./mysql:/docker-entrypoint-initdb.d
+#      - ./mysql/data:/var/lib/mysql //Uncomment this line to persist data
+    command:
+      [
+        mysqld,
+        --character-set-server=utf8mb4,
+        --collation-server=utf8mb4_unicode_ci,
+        --innodb_monitor_enable=all,
+        --max-connections=1001,
+      ]
+    ports:
+      - 3307:3306
+    healthcheck:
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost" ]
+      timeout: 10s
+      retries: 10
+    networks:
+      - arbitrage-bot-network
+
+
+  grafana:
+    image: grafana/grafana-oss:latest
+    ports:
+      - "3000:3000"
+    env_file:
+      - config-DOCKER.env
+    environment:
+      GF_MYSQL_DEFAULT_URL: "http://mysql:3306"
+      GF_MYSQL_DEFAULT_DB: crypto_arbitrage_bot
+      GF_MYSQL_DEFAULT_USER: grafana
+      GF_DASHBOARDS_JSON_ENABLED: "true"
+      GF_PATHS_PROVISIONING: /etc/grafana/provisioning
+      GF_DASHBOARDS_CONFIG_FILE: /etc/grafana/provisioning/dashboards
+    volumes:
+      - ./grafana:/etc/grafana/provisioning/datasources
+      - ./grafana/dashboards:/etc/grafana/provisioning/dashboards
+    links:
+      - mysql
+    networks:
+      - arbitrage-bot-network
+
+
+networks:
+  arbitrage-bot-network:
+    driver: bridge
