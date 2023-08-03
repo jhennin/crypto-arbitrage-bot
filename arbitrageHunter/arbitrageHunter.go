@@ -142,7 +142,7 @@ func isTrangularArbitrage1Exchange(exchangePrices []bookkeeper.PriceRecord) book
 
 	crossExchangeRateDiff := ((crossExchangeRate - ethBtcExchangeRate) / ethBtcExchangeRate) - (exchangePrices[0].Fee * 3)
 	isTriangularArbitrageOpportunity := func() bool {
-		if crossExchangeRateDiff > 0 { // TODO There are some edge cases where crossExchangeRateDiff > 0, but isTriangularArbitrageOpportunity is false. Need to figure out why.
+		if crossExchangeRateDiff > 0 {
 			utils.Logger.Info(fmt.Sprintf("Found a triangular arbitrage opportunity! CrossExchangeRateDiff = %v", crossExchangeRateDiff))
 			return true
 		}
