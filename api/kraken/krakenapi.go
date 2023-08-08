@@ -129,7 +129,9 @@ func (api *KrakenAPI) Assets() (*AssetsResponse, error) {
 	return resp.(*AssetsResponse), nil
 }
 
-// Ticker returns the ticker for given comma separated pairs
+/*
+	Returns the ticker for given comma separated pairs
+*/
 func (api *KrakenAPI) Ticker(pairs ...string) (*TickerResponse, error) {
 	resp, err := api.queryPublic("Ticker", url.Values{
 		"pair": {strings.Join(pairs, ",")},
@@ -141,6 +143,9 @@ func (api *KrakenAPI) Ticker(pairs ...string) (*TickerResponse, error) {
 	return resp.(*TickerResponse), nil
 }
 
+/*
+Get prices from Kraken. Specifically,
+*/
 func (api *KrakenAPI) GetPrices() []bookkeeper.PriceRecord {
 
 	resp, err := api.Ticker()
@@ -197,50 +202,6 @@ func (api *KrakenAPI) GetPrices() []bookkeeper.PriceRecord {
 	}
 	bookkeeper.RecordPriceRecord(priceRecords...)
 	return priceRecords
-}
-
-// OHLCWithInterval returns a OHLCResponse struct based on the given pair
-func (api *KrakenAPI) OHLCWithInterval(pair string, interval string) (*OHLCResponse, error) {
-	urlValue := url.Values{}
-	urlValue.Add("pair", pair)
-
-	if interval == "" {
-		urlValue.Add("interval", "1")
-	} else {
-		switch interval {
-		// supported values https://www.kraken.com/features/api#get-ohlc-data
-		case "1", "5", "15", "30", "60", "240", "1440", "10080", "21600":
-			urlValue.Add("interval", interval)
-		default:
-			return nil, fmt.Errorf("Unsupported value for Interval: " + interval)
-		}
-	}
-
-	// Returns a map[string]interface{} as an interface{}
-	interfaceResponse, err := api.queryPublic("OHLC", urlValue, nil)
-	if err != nil {
-		return nil, err
-	}
-
-	// Converts the interface into map[string]interface{}
-	mapResponse := interfaceResponse.(map[string]interface{})
-	// Extracts the list of OHLC from the map to build a slice of interfaces
-	OHLCsUnstructured := mapResponse[pair].([]interface{})
-
-	ret := new(OHLCResponse)
-	for _, OHLCInterfaceSlice := range OHLCsUnstructured {
-		OHLCObj, OHLCErr := NewOHLC(OHLCInterfaceSlice.([]interface{}))
-		if OHLCErr != nil {
-			return nil, OHLCErr
-		}
-
-		ret.OHLC = append(ret.OHLC, OHLCObj)
-	}
-
-	ret.Pair = pair
-	ret.Last = mapResponse["last"].(float64)
-
-	return ret, nil
 }
 
 // Trades returns the recent trades for given pair

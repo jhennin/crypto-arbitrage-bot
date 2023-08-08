@@ -25,6 +25,9 @@ func (e *DatabaseError) Error() string {
 	return fmt.Sprint("Error establishing connection to database: ") + e.Msg
 }
 
+/*
+Connect to database and test connection. Returns error if connection fails.
+*/
 func ConnectToDatabase() *DatabaseError {
 
 	DbPool, err = connectTCPSocket()
@@ -50,8 +53,9 @@ func ConnectToDatabase() *DatabaseError {
 	return nil
 }
 
-// connectTCPSocket initializes a TCP connection pool for a Cloud SQL
-// instance of MySQL.
+/*
+Initializes a TCP connection pool for a Cloud SQL instance of MySQL.
+*/
 func connectTCPSocket() (*sql.DB, error) {
 	mustGetenv := func(k string) string {
 		v := viper.Get(k).(string)
@@ -81,6 +85,9 @@ func connectTCPSocket() (*sql.DB, error) {
 	return dbPool, nil
 }
 
+/*
+Tests the database by inserting a test record and then deleting it.
+*/
 func testDatabase() *DatabaseError {
 	database := goqu.New("mysql", DbPool)
 

@@ -47,6 +47,9 @@ type TriangularArbitrageEventRecord struct {
 	IsTriangularArbitrageOpportunity bool      `db:"is_triangular_arbitrage_opportunity"`
 }
 
+/*
+Insert PriceRecord into the database.
+*/
 func RecordPriceRecord(priceRecords ...PriceRecord) *internal.DatabaseError {
 	database := goqu.New("mysql", internal.DbPool)
 	for _, priceRecord := range priceRecords {
@@ -67,6 +70,9 @@ func RecordPriceRecord(priceRecords ...PriceRecord) *internal.DatabaseError {
 	return nil
 }
 
+/*
+Insert ArbitrageEventRecord into the database.
+*/
 func RecordArbitrageRecords(arbitrageEventRecords []ArbitrageEventRecord) error {
 	database := goqu.New("mysql", internal.DbPool)
 
@@ -87,6 +93,9 @@ func RecordArbitrageRecords(arbitrageEventRecords []ArbitrageEventRecord) error 
 	return nil
 }
 
+/*
+Insert TriangularArbitrageEventRecord into the database.
+*/
 func RecordTriangularArbitrageRecord(triangularArbitrageEventRecord TriangularArbitrageEventRecord) error {
 
 	database := goqu.New("mysql", internal.DbPool)

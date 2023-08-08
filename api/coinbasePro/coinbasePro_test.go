@@ -7,9 +7,7 @@ import (
 	"fmt"
 	"github.com/magiconair/properties/assert"
 	"github.com/spf13/viper"
-	assert2 "github.com/stretchr/testify/assert"
 	"log"
-	"net/http"
 	"strconv"
 	"testing"
 	"time"
@@ -61,16 +59,4 @@ func Test_RequestBuilder(t *testing.T) {
 	assert.Equal(t, cbAccessSignature, actualRequest.Header.Get("CB-ACCESS-SIGN"), "FAILED: CB-ACCESS-SIGN")
 	assert.Equal(t, now, actualRequest.Header.Get("CB-ACCESS-TIMESTAMP"), "FAILED: CB-ACCESS-TIMESTAMP")
 	assert.Equal(t, passphrase, actualRequest.Header.Get("CB-ACCESS-PASSPHRASE"), "FAILED: CB-ACCESS-PASSPHRASE")
-}
-
-func Test_getSignedPrices(t *testing.T) {
-	teardownTest := setupTest(t)
-	defer teardownTest(t)
-
-	client := &http.Client{Timeout: time.Second * 10}
-
-	actualSigendPrices, err := getSignedPrices(client)
-
-	assert2.Emptyf(t, err, "Failed to retrieve signed prices.")
-	assert2.NotEmpty(t, actualSigendPrices, "Failed to retrieve signed prices.")
 }

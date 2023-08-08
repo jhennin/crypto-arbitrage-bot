@@ -11,6 +11,9 @@ var (
 	cfg    zap.Config
 )
 
+/*
+Initializes the logger that is used for entire program. Powered by Zap (https://github.com/uber-go/zap.
+*/
 func InitializeLogger() {
 
 	rawJSON := []byte(`{
@@ -35,6 +38,9 @@ func InitializeLogger() {
 	Logger.Info("Successfully initialized logger (Powered by Zap).")
 }
 
+/*
+Sets the logger level. Accepts "DEBUG" or "INFO".
+*/
 func SetLoggerLevel(level string) {
 	switch strings.ToUpper(level) {
 	case "DEBUG":

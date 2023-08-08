@@ -14,8 +14,10 @@ var key string
 var secret string
 var passphrase string
 
-// Initialize the environment variables.
-// Values are stored in a configuration file (e.g. config-DEV.yaml)
+/*
+Initialize the environment variables.
+Values are stored in a configuration file (e.g. config-DEV.yaml)
+*/
 func init() {
 	var ok bool
 
@@ -56,6 +58,9 @@ func init() {
 	utils.SetLoggerLevel("INFO")
 }
 
+/*
+Main entry point of the Crypto Arbitrage Bot.
+*/
 func main() {
 
 	databaseErr := internal.ConnectToDatabase()

@@ -9,7 +9,7 @@ services:
       MYSQL_USER: grafana
     volumes:
       - ./mysql:/docker-entrypoint-initdb.d
-#      - ./mysql/data:/var/lib/mysql //Uncomment this line to persist data
+#      - ./mysql/data:/var/lib/mysql //TODO Uncomment this line to persist data
     command:
       [
         mysqld,

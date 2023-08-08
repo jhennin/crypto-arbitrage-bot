@@ -28,6 +28,9 @@ func (e *ArbitrageHunterError) Error() string {
 	return fmt.Sprint("An error has occured with the Arbitrage Hunter.")
 }
 
+/*
+Main entry point for the Arbitrage Hunter.
+*/
 func Start() *ArbitrageHunterError {
 	if arbitrageHunterPrompt() == false {
 		return &ArbitrageHunterError{
@@ -62,6 +65,9 @@ func Start() *ArbitrageHunterError {
 	return nil
 }
 
+/*
+Prompt the user to start the Arbitrage Hunter.
+*/
 func arbitrageHunterPrompt() bool {
 	fmt.Printf("Grafana dashboard is availabe at --> http://localhost:3000\n")
 	fmt.Printf("Would you like to release the Arbitrage Hunter? (y/n): ")
@@ -84,6 +90,9 @@ func arbitrageHunterPrompt() bool {
 	return true
 }
 
+/*
+Takes in a slice of price records and determine if there is an arbitrage opportunity.
+*/
 func isArbitrageOpportunity(exchangePrices ...[]bookkeeper.PriceRecord) []bookkeeper.ArbitrageEventRecord {
 	priceRecords := flatten(exchangePrices)
 	utils.Logger.Debug("------------> exchangePrices length = " + strconv.Itoa(len(priceRecords)))
@@ -124,6 +133,9 @@ func isArbitrageOpportunity(exchangePrices ...[]bookkeeper.PriceRecord) []bookke
 	return arbitrageRecords
 }
 
+/*
+Take in a slice of price records and determine if there is a triangular arbitrage opportunity. The triangular arbitrage opportunity is only possible if there is one exchange that has all three currencies.
+*/
 func isTrangularArbitrage1Exchange(exchangePrices []bookkeeper.PriceRecord) bookkeeper.TriangularArbitrageEventRecord {
 	var ethBtcExchangeRate float64
 	var ethLtcExchangeRate float64 //NOTE this is inverted (i.e. ETHLTC = 1 / LTCETH)

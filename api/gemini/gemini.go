@@ -27,12 +27,18 @@ type GeminiClient struct {
 	client *http.Client
 }
 
+/*
+Create a new GeminiClient
+*/
 func NewClient() GeminiClient {
 	return GeminiClient{
 		client: internal.GetClient(),
 	}
 }
 
+/*
+Get crypto currency prices from Gemini. Specifically, get the price of BTCUSD, ETHUSD, LTCUSD, ETHBTC, LTCBTC, and LTCETH.
+*/
 func (c *GeminiClient) GetPrices() []bookkeeper.PriceRecord {
 
 	priceFeedGemini, error := getPriceFeed(c.client)
@@ -76,6 +82,9 @@ func getBtcPriceFromGeminiPriceFeed(priceFeed []PriceRecordGemini) string {
 	return ""
 }
 
+/*
+Build a http.Request for Gemini.
+*/
 func requestBuilder(now string, path string, method string) *http.Request {
 	geminiURL, ok := viper.Get("GEMINI.URL").(string)
 	if !ok {
@@ -114,6 +123,9 @@ func requestBuilder(now string, path string, method string) *http.Request {
 	return request
 }
 
+/*
+Get the Gemini price feed.
+*/
 func getPriceFeed(client *http.Client) ([]PriceRecordGemini, error) {
 	var priceRecordGemini []PriceRecordGemini
 	errorGemini := errorGemini{}

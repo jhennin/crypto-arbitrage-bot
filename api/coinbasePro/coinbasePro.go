@@ -34,12 +34,18 @@ func (e *CoinbaseProError) Error() string {
 	return fmt.Sprintf("Error using the Coinbase Pro API.")
 }
 
+/*
+Create a new CoinbaseProClient.
+*/
 func NewClient() CoinbaseProClient {
 	return CoinbaseProClient{
 		internal.GetClient(),
 	}
 }
 
+/*
+Get currency prices from Coingbase Pro API. Specifically BTC-USD, ETH-USD, LTC-USD, ETH-BTC, LTC-BTC.
+*/
 func (c *CoinbaseProClient) GetPrices() ([]bookkeeper.PriceRecord, *CoinbaseProError) {
 
 	aTicker, productTickerErr := getProductTicker(c.client, "BTC-USD") //TODO program is crashing here
@@ -148,6 +154,9 @@ func (c *CoinbaseProClient) GetPrices() ([]bookkeeper.PriceRecord, *CoinbaseProE
 	return prices, nil
 }
 
+/*
+Build a http.Request object for Coinbase Pro API.
+*/
 func requestBuilder(now string, method string, path string, body string) *http.Request {
 	var key = viper.Get("COINBASE_PRO.TEST.KEY").(string)
 	var secret = viper.Get("COINBASE_PRO.TEST.SECRET").(string)
@@ -178,6 +187,9 @@ func requestBuilder(now string, method string, path string, body string) *http.R
 	return request
 }
 
+/*
+Get a single product ticker for a given product id.
+*/
 func getProductTicker(client *http.Client, productId string) (ProductTicker, *CoinbaseProError) {
 	now := strconv.FormatInt(time.Now().Unix(), 10)
 	path := fmt.Sprintf("/products/%s/ticker", productId)
@@ -218,43 +230,4 @@ func getProductTicker(client *http.Client, productId string) (ProductTicker, *Co
 	}
 	return productTicker, nil
 
-}
-
-func getSignedPrices(client *http.Client) (SignedPrices, *CoinbaseProError) {
-
-	now := strconv.FormatInt(time.Now().Unix(), 10)
-	path := "/oracle"
-	signedPrices := SignedPrices{}
-	errorCoinbasePro := errorCoinbasePro{}
-
-	resp, err := client.Do(requestBuilder(now, "GET", path, ""))
-	if err != nil {
-		utils.Logger.Error(err.Error())
-	}
-	defer resp.Body.Close()
-
-	body, err := ioutil.ReadAll(resp.Body)
-
-	if err != nil {
-		utils.Logger.Error(err.Error())
-	}
-	bodyString := string(body)
-	fmt.Println(bodyString)
-
-	err = json.Unmarshal(body, &signedPrices)
-	if err != nil {
-		utils.Logger.Error(fmt.Sprintf("ERROR UNMARSHALLING 'signedPrices' --> %v\n\n Response body: \n\n%v", err, body))
-	}
-
-	err = json.Unmarshal(body, &errorCoinbasePro)
-	if err != nil {
-		utils.Logger.Error(fmt.Sprintf("ERROR UNMARSHALLING 'errorCoinbasePro'--> %v\n\n Response body: \n\n%v", err, body))
-	}
-
-	if errorCoinbasePro.Message != "" {
-		return signedPrices, &CoinbaseProError{
-			Msg: errorCoinbasePro.Message,
-		}
-	}
-	return signedPrices, nil
 }
