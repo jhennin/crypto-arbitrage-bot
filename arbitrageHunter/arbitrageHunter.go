@@ -40,7 +40,7 @@ func Start() *ArbitrageHunterError {
 
 	coinbaseProClient := coinbasePro.NewClient()
 	geminiClient := gemini.NewClient()
-	krakenCLient := kraken.NewWithClient(viper.Get("KRAKEN.API_KEY_1675894563504.KEY").(string), viper.Get("KRAKEN.API_KEY_1675894563504.KEY").(string), internal.GetClient())
+	krakenCLient := kraken.NewWithClient(viper.Get("KRAKEN.TEST.KEY").(string), viper.Get("KRAKEN.TEST.KEY").(string), internal.GetClient())
 
 	scheduler := gocron.NewScheduler(time.UTC)
 	job, err := scheduler.Every(5).Seconds().Do(
