@@ -4,7 +4,7 @@
 
 This is a Crypto Currency Arbitrage Bot designed to detect arbitrage opportunities in the market across three different exchanges: Coinbase Pro, Gemini, and Kraken. The application deploys 2 containers via Docker: a MYSQL database, and a Grafana server. The Grafana server is used to visualize the data in the MYSQL server, as well as detecting arbitrage opportunites. It is designed to be lightweight, fast, and portable. Additionally, there is a sutie of tests that cover a number of different scenarios.
 
-If your interested in learning more about the project, check out the article ["Run Your Own Crypto Arbitrage Bot"](medium.com).
+If your interested in learning more about the project, check out the article ["Run Your Own Crypto Arbitrage Bot"](https://medium.com/@jake.henningsgaard/run-your-own-crypto-arbitrage-bot-6e9e3bb74d62).
 
 ## Pre-requisites
  * [Docker](https://docs.docker.com/get-docker/)
