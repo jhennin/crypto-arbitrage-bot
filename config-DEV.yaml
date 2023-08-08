@@ -1,0 +1,31 @@
+# DEV ENVIRONMENT CONFIGURATIONS
+
+############ CRYPTO-CURRENCY EXCHANGE API ############
+COINBASE_PRO:
+  URL: "https://api.exchange.coinbase.com"
+  TEST:
+    KEY: "CHANGE-ME" #TODO Change this KEY
+    SECRET: "CHANGE-ME"#TODO: Change this secret
+    PASSPHRASE: "CHANGE-ME" #TODO: Change this passphrase
+
+GEMINI:
+  URL: "https://api.gemini.com"
+  TEST:
+    KEY: "CHANGE-ME" #TODO: Change this key
+    SECRET: "CHANGE-ME" #TODO: Change this secret
+
+KRAKEN:
+  URL: "https://api.kraken.com"
+  Test:
+    KEY: "CHANGE-ME" #TODO: Change this key
+    SECRET: "CHANGE-ME" #TODO: Change this secret
+
+############ DATABASE CONFIGURATIONS ############
+DATABASE:
+  MY_SQL_DOCKER:
+    NAME: "crypto_arbitrage_bot"
+    HOST: "localhost"
+    USERNAME: "crypto_bot"
+    PASSWORD: "change_crypto_bot_password" #TODO: Change this secret
+    PORT: "3307"
+    INSTANCE_SOCKET_NAME: var/lib/mysql/mysql.sock
